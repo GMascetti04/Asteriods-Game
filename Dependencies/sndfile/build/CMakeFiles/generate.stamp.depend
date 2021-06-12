@@ -1,0 +1,66 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.18/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakePushCheckState.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CPack.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CPackComponent.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/FeatureSummary.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/FindSQLite3.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/TestBigEndian.cmake
+C:/Program Files/CMake/share/cmake-3.18/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.18/Templates/CPackConfig.cmake.in
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/CMakeLists.txt
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CMakeCCompiler.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CMakeCXXCompiler.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CMakeRCCompiler.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CMakeSystem.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/CheckCPUArch.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/ClipMode.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindFLAC.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindLame.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindMpg123.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindOgg.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindOpus.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindSpeex.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/FindVorbis.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/SndFileChecks.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/SndFileConfig.cmake.in
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/TestInline.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/cmake/TestLargeFiles.cmake
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/include/sndfile.h.in
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/sndfile.pc.in
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/src/config.h.cmake

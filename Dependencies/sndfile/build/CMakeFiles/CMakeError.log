@@ -1,0 +1,363 @@
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c0015.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0015.dir\Debug\\" /Fd"cmTC_c0015.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'byteswap.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_c0015.vcxproj]
+
+
+
+Determining if the include file dlfcn.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_0dec1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0dec1.dir\Debug\\" /Fd"cmTC_0dec1.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'dlfcn.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_0dec1.vcxproj]
+
+
+
+Determining if the include file endian.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_02505.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_02505.dir\Debug\\" /Fd"cmTC_02505.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'endian.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_02505.vcxproj]
+
+
+
+Determining if the include file sys/time.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_a89c7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a89c7.dir\Debug\\" /Fd"cmTC_a89c7.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_a89c7.vcxproj]
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f99c2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f99c2.dir\Debug\\" /Fd"cmTC_f99c2.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_f99c2.vcxproj]
+
+
+
+Determining if the include file sys/wait.h exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ce2db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce2db.dir\Debug\\" /Fd"cmTC_ce2db.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Cannot open include file: 'sys/wait.h': No such file or directory [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_ce2db.vcxproj]
+
+
+
+Determining size of ssize_t failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_894a1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_SSIZE_T.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_894a1.dir\Debug\\" /Fd"cmTC_894a1.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(29,12): error C2065: 'ssize_t': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_894a1.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(30,12): error C2065: 'ssize_t': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_894a1.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(31,12): error C2065: 'ssize_t': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_894a1.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(32,12): error C2065: 'ssize_t': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_894a1.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(33,12): error C2065: 'ssize_t': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_894a1.vcxproj]
+
+
+C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CheckTypeSize/SIZEOF_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function sqlite3_close exists in the sqlite3 failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_67a5b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sqlite3_close /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67a5b.dir\Debug\\" /Fd"cmTC_67a5b.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'sqlite3.lib' [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_67a5b.vcxproj]
+
+
+
+Determining if the function fstat64 exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_cf646.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fstat64 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf646.dir\Debug\\" /Fd"cmTC_cf646.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol fstat64 referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_cf646.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_cf646.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_cf646.vcxproj]
+
+
+
+Determining if the function gettimeofday exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_42f8b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gettimeofday /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_42f8b.dir\Debug\\" /Fd"cmTC_42f8b.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol gettimeofday referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_42f8b.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_42f8b.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_42f8b.vcxproj]
+
+
+
+Determining if the function gmtime_r exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5964e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gmtime_r /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5964e.dir\Debug\\" /Fd"cmTC_5964e.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol gmtime_r referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_5964e.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_5964e.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_5964e.vcxproj]
+
+
+
+Determining if the function localtime_r exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_95ac5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=localtime_r /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_95ac5.dir\Debug\\" /Fd"cmTC_95ac5.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol localtime_r referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_95ac5.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_95ac5.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_95ac5.vcxproj]
+
+
+
+Determining if the function pipe exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_761de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pipe /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_761de.dir\Debug\\" /Fd"cmTC_761de.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol pipe referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_761de.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_761de.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_761de.vcxproj]
+
+
+
+Determining if the function waitpid exists failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_dd626.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=waitpid /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dd626.dir\Debug\\" /Fd"cmTC_dd626.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol waitpid referenced in function main [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_dd626.vcxproj]
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_dd626.exe : fatal error LNK1120: 1 unresolved externals [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_dd626.vcxproj]
+
+
+
+Determining if the S_IRGRP exist failed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_65ee6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_65ee6.dir\Debug\\" /Fd"cmTC_65ee6.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8,26): error C2065: 'S_IRGRP': undeclared identifier [C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\cmTC_65ee6.vcxproj]
+
+
+File C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/stat.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef S_IRGRP
+  return ((int*)(&S_IRGRP))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test CPU_CLIPS_POSITIVE failed with the following compile output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4cb5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CPU_CLIPS_POSITIVE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4cb5a.dir\Debug\\" /Fd"cmTC_4cb5a.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\src.c"
+  cmTC_4cb5a.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_4cb5a.exe
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+			#define	_ISOC9X_SOURCE	1
+			#define _ISOC99_SOURCE	1
+			#define	__USE_ISOC99	1
+			#define __USE_ISOC9X	1
+			#include <math.h>
+			int main (void)
+			{	double	fval ;
+				int k, ival ;
+
+				fval = 1.0 * 0x7FFFFFFF ;
+				for (k = 0 ; k < 100 ; k++)
+				{	ival = (lrint (fval)) >> 24 ;
+					if (ival != 127)
+						return 1 ;
+				
+					fval *= 1.2499999 ;
+					} ;
+				
+					return 0 ;
+				}
+			
+Performing C SOURCE FILE Test CPU_CLIPS_NEGATIVE failed with the following compile output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_45ebd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CPU_CLIPS_NEGATIVE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45ebd.dir\Debug\\" /Fd"cmTC_45ebd.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\src.c"
+  cmTC_45ebd.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_45ebd.exe
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+			#define	_ISOC9X_SOURCE	1
+			#define _ISOC99_SOURCE	1
+			#define	__USE_ISOC99	1
+			#define __USE_ISOC9X	1
+			#include <math.h>
+			int main (void)
+			{	double	fval ;
+				int k, ival ;
+
+				fval = -8.0 * 0x10000000 ;
+				for (k = 0 ; k < 100 ; k++)
+				{	ival = (lrint (fval)) >> 24 ;
+					if (ival != -128)
+						return 1 ;
+				
+					fval *= 1.2499999 ;
+					} ;
+				
+					return 0 ;
+				}
+			

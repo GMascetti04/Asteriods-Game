@@ -25,6 +25,9 @@ workspace "Asteriods-Game"
     Includes["imGUI"] = "Dependencies/imGUI"
     Includes["spdlog"] = "Dependencies/spdlog/include"
     Includes["glm"] = "Dependencies/glm/"
+    Includes["sndfile"] = "Dependencies/sndfile/include"
+   -- Includes["sndfileBUILD"] = "Dependencies/sndfile/build/include"
+
     
 
     
@@ -35,6 +38,8 @@ workspace "Asteriods-Game"
         include "Dependencies/GLEW"
         include "Dependencies/imGUI"
         include "Dependencies/spdlog"
+        include "Dependencies/sndfile"
+
         
 
     group ""
@@ -89,6 +94,8 @@ workspace "Asteriods-Game"
            "%{Includes.imGUI}",
            "%{Includes.spdlog}",
            "%{Includes.glm}",
+           "%{Includes.sndfile}",
+         
            
            "%{prj.name}/src",
            "%{prj.name}/src/Engine/vendor/glm"
@@ -99,6 +106,8 @@ workspace "Asteriods-Game"
             "GLFW",
             "GLEW",
             "imGUI",
+            "sndfile",
+
           
             "spdlog"
         }

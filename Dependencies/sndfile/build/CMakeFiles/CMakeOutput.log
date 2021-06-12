@@ -1,0 +1,508 @@
+The system is: Windows - 10.0.19042 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 6/12/2021 1:12:16 PM.
+Project "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdC\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\Hostx64\x64\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.02
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 6/12/2021 1:12:17 PM.
+Project "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdCXX\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\Hostx64\x64\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Done Building Project "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\3.18.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.77
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/3.18.0-rc2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ab0d4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CMakeCCompilerABI.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab0d4.dir\Debug\\" /Fd"cmTC_ab0d4.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c"
+  cmTC_ab0d4.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_ab0d4.exe
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9229a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CMakeCXXCompilerABI.cpp
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9229a.dir\Debug\\" /Fd"cmTC_9229a.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_9229a.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_9229a.exe
+
+
+
+Determining if the include file direct.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7ed72.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7ed72.dir\Debug\\" /Fd"cmTC_7ed72.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_7ed72.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_7ed72.exe
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_95921.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_95921.dir\Debug\\" /Fd"cmTC_95921.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_95921.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_95921.exe
+
+
+
+Determining if the include file io.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e98bc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e98bc.dir\Debug\\" /Fd"cmTC_e98bc.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_e98bc.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_e98bc.exe
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_88216.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_88216.dir\Debug\\" /Fd"cmTC_88216.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_88216.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_88216.exe
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1c5f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1c5f9.dir\Debug\\" /Fd"cmTC_1c5f9.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_1c5f9.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_1c5f9.exe
+
+
+
+Determining if the include file immintrin.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1e841.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1e841.dir\Debug\\" /Fd"cmTC_1e841.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_1e841.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_1e841.exe
+
+
+
+Determining if the include file stdbool.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5684f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5684f.dir\Debug\\" /Fd"cmTC_5684f.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_5684f.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_5684f.exe
+
+
+
+Determining if the include file locale.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_bd249.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bd249.dir\Debug\\" /Fd"cmTC_bd249.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_bd249.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_bd249.exe
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_428da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckIncludeFile.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_428da.dir\Debug\\" /Fd"cmTC_428da.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_428da.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_428da.exe
+
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_14815.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_INT64_T.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_14815.dir\Debug\\" /Fd"cmTC_14815.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_INT64_T.c"
+  cmTC_14815.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_14815.exe
+
+
+
+Determining size of long passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ec449.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_LONG.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ec449.dir\Debug\\" /Fd"cmTC_ec449.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c"
+  cmTC_ec449.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_ec449.exe
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_3ef75.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_LONG_LONG.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3ef75.dir\Debug\\" /Fd"cmTC_3ef75.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c"
+  cmTC_3ef75.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_3ef75.exe
+
+
+
+Determining size of wchar_t passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1f6d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_WCHAR_T.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1f6d3.dir\Debug\\" /Fd"cmTC_1f6d3.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_WCHAR_T.c"
+  cmTC_1f6d3.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_1f6d3.exe
+
+
+
+Determining size of __int64 passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_02758.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_SF_COUNT_T.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_02758.dir\Debug\\" /Fd"cmTC_02758.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SF_COUNT_T.c"
+  cmTC_02758.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_02758.exe
+
+
+
+Determining if the function fstat exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e5511.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fstat /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e5511.dir\Debug\\" /Fd"cmTC_e5511.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_e5511.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_e5511.exe
+
+
+
+Determining if the function gmtime exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_3ec78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gmtime /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3ec78.dir\Debug\\" /Fd"cmTC_3ec78.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_3ec78.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_3ec78.exe
+
+
+
+Determining if the function localtime exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2eff6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=localtime /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2eff6.dir\Debug\\" /Fd"cmTC_2eff6.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_2eff6.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_2eff6.exe
+
+
+
+Determining if the function lseek exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7e36f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=lseek /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7e36f.dir\Debug\\" /Fd"cmTC_7e36f.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_7e36f.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_7e36f.exe
+
+
+
+Determining if the function open exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b2875.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=open /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b2875.dir\Debug\\" /Fd"cmTC_b2875.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_b2875.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_b2875.exe
+
+
+
+Determining if the function read exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_80534.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=read /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_80534.dir\Debug\\" /Fd"cmTC_80534.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_80534.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_80534.exe
+
+
+
+Determining if the function write exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c1386.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=write /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c1386.dir\Debug\\" /Fd"cmTC_c1386.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_c1386.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_c1386.exe
+
+
+
+Determining if the function lrint exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_31cae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=lrint /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31cae.dir\Debug\\" /Fd"cmTC_31cae.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_31cae.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_31cae.exe
+
+
+
+Determining if the function lrintf exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_3a5fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=lrintf /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3a5fc.dir\Debug\\" /Fd"cmTC_3a5fc.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_3a5fc.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_3a5fc.exe
+
+
+
+Determining if the function setlocale exists passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_67824.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=setlocale /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67824.dir\Debug\\" /Fd"cmTC_67824.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c"
+  cmTC_67824.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_67824.exe
+
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1aa2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CMAKE_SIZEOF_UNSIGNED_SHORT.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1aa2a.dir\Debug\\" /Fd"cmTC_1aa2a.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c"
+  cmTC_1aa2a.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_1aa2a.exe
+
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: C:/Users/Giovanni/source/repos/Asteriods-Game/Dependencies/sndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4f7db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.10.1+2fd48ab73 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30037 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  TestEndianess.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4f7db.dir\Debug\\" /Fd"cmTC_4f7db.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TC /errorReport:queue "C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\TestEndianess.c"
+  cmTC_4f7db.vcxproj -> C:\Users\Giovanni\source\repos\Asteriods-Game\Dependencies\sndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_4f7db.exe
+
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
