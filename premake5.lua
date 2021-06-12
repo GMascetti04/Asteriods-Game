@@ -26,6 +26,7 @@ workspace "Asteriods-Game"
     Includes["spdlog"] = "Dependencies/spdlog/include"
     Includes["glm"] = "Dependencies/glm/"
     Includes["sndfile"] = "Dependencies/sndfile/include"
+    Includes["OpenAL"] = "Dependencies/OpenAL/include"
    -- Includes["sndfileBUILD"] = "Dependencies/sndfile/build/include"
 
     
@@ -39,6 +40,7 @@ workspace "Asteriods-Game"
         include "Dependencies/imGUI"
         include "Dependencies/spdlog"
         include "Dependencies/sndfile"
+        include "Dependencies/OpenAL"
 
         
 
@@ -95,6 +97,7 @@ workspace "Asteriods-Game"
            "%{Includes.spdlog}",
            "%{Includes.glm}",
            "%{Includes.sndfile}",
+           "%{Includes.OpenAL}",
          
            
            "%{prj.name}/src",
@@ -107,6 +110,7 @@ workspace "Asteriods-Game"
             "GLEW",
             "imGUI",
             "sndfile",
+            "OpenAL",
 
           
             "spdlog"
@@ -117,7 +121,8 @@ workspace "Asteriods-Game"
             systemversion "latest"
             links
             {
-                "opengl32.lib"
+                "opengl32.lib",
+                "Winmm.lib"
             }
             
         filter "system:linux"

@@ -1,7 +1,8 @@
 #include "xpch.h"
 #include "Engine/Debug/Logger.h"
 #include "Audio.h"
-#include <sndfile.h>
+#include "../../Dependencies/sndfile/build/include/sndfile.h"
+//#include <sndfile.h>
 #include <inttypes.h>
 
 #define ALC_API
