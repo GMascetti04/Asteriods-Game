@@ -23,6 +23,8 @@ Dependencies/spdlog/spdlog.txt
 Makefile
 Sandbox/Sandbox.txt
 *.workspace
+build.bat
+clear.bat
 
 
 
