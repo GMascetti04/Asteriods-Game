@@ -115,7 +115,7 @@ workspace "Asteriods-Game"
           
             "spdlog"
         }
-
+        debugdir ""
         --might edit these
         filter "system:windows"
             systemversion "latest"
