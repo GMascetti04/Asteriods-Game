@@ -7,7 +7,7 @@ class BulletScript : public xEngine::Script
 {
 public:
 	glm::vec2 velocity;
-	ShipScript* asteriodScript;
+	ShipScript* shipScript;
 	virtual void onCreate() override
 	{
 		
@@ -17,7 +17,7 @@ public:
 		timeLeft -= dt.getSeconds<float>();
 		if (timeLeft <= 0)
 		{
-			asteriodScript->BulletDied();
+			shipScript->BulletDied();
 			xEngine::Script::getEntity().getScene()->destroyEntity(xEngine::Script::getEntity());
 			return;	
 		}
@@ -54,8 +54,9 @@ public:
 				xEngine::Component::TransformComponent& asteriodTransform = registry.getComponent<xEngine::Component::TransformComponent>(Entity(ent, getEntity().getScene()));
 				if (CirclePointCollision({ ts.x,ts.y }, { asteriodTransform.x, asteriodTransform.y }, asteriodTransform.x_scale / 2))
 				{
-					asteriodScript->BulletDied();
-					registry.destroyEntity({ ent,getEntity().getScene() });
+					shipScript->BulletDied();
+					//registry.destroyEntity({ ent,getEntity().getScene() });
+					Entity(ent, getEntity().getScene()).getComponent<xEngine::Component::ScriptComponent>().getScript<AsteriodScript>()->BulletHit();
 					getEntity().getScene()->destroyEntity(getEntity());
 					return;
 				}

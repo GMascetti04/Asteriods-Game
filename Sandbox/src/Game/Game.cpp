@@ -95,7 +95,7 @@ void onStartup() {
 		});
 
 	Audio::Load("res/shoot.wav");
-
+	Audio::Load("res/explosion.wav");
 
 	application::SetActiveScene("Chess Game");
 
@@ -112,9 +112,14 @@ void onStartup() {
 	ship.addComponent<xEngine::Component::ScriptComponent>().Attach<ShipScript>(ship);
 	((ShipScript*)(ship.getComponent<xEngine::Component::ScriptComponent>().m_Script))->asteriodTexture = asteriodTexture;
 	ship.addComponent<xEngine::Component::ParticleSystem>(10);
-	ship.addComponent<xEngine::Component::AudioSource>().AddSound(Audio::Get("res/shoot.wav"));
-	ship.getComponent<xEngine::Component::AudioSource>().getProperties(0).playOnAwake = false;
-	ship.getComponent<xEngine::Component::AudioSource>().getProperties(0).loop = false;
+	xEngine::Component::AudioSource& as = ship.addComponent<xEngine::Component::AudioSource>();
+	as.AddSound(Audio::Get("res/shoot.wav"));
+	as.getProperties(0).playOnAwake = false;
+	as.getProperties(0).loop = false;
+	as.AddSound(Audio::Get("res/explosion.wav"));
+	as.getProperties(1).playOnAwake = false;
+	as.getProperties(1).loop = false;
+	
 	
 
 	Scene::LoadScene(&myScene);

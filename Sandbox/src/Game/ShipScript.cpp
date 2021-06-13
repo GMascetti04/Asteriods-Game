@@ -7,21 +7,22 @@
 
 void ShipScript::onUpdate(DeltaTime& dt)
 {
-	float speed = 100.0f;
-	float angular = 250;
+	//float speed = 100.0f;
+	//float angular = 250;
 	xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
-	float Force = 1000;
-	float mass = 2;
-	float friction = 200;
+//	float Force = 1000;
+	//float mass = 2;
+	//float friction = 1000;
+	//float maxSpeed = 850;
 
 	if (Input::keyPressed(codes::KeyCode::left))
 	{
-		ts.rot += angular * dt.getSeconds<float>();
+		ts.rot += this->angularSpeed * dt.getSeconds<float>();
 	}
 
 	if (Input::keyPressed(codes::KeyCode::right))
 	{
-		ts.rot -= angular * dt.getSeconds<float>();
+		ts.rot -= this->angularSpeed * dt.getSeconds<float>();
 	}
 
 	if(getComponent<xEngine::Component::Sprite2DComponent>().visible)
@@ -32,8 +33,17 @@ void ShipScript::onUpdate(DeltaTime& dt)
 		float particleSpeed = 40;
 
 		//Impulse Momentum Theorem
-		velocity.x += dt.getSeconds<float>() * Force * glm::cos(glm::radians(theta)) / mass;
-		velocity.y += dt.getSeconds<float>() * Force * glm::sin(glm::radians(theta)) / mass;
+		velocity.x += dt.getSeconds<float>() * thrustForce * glm::cos(glm::radians(theta)) / mass;
+		velocity.y += dt.getSeconds<float>() * thrustForce * glm::sin(glm::radians(theta)) / mass;
+
+		float speed = glm::sqrt(glm::pow(velocity.x, 2) + glm::pow(velocity.y, 2));
+		if (speed > maxSpeed)
+		{
+			speed = maxSpeed;
+		}
+		float angle = std::atan2f(velocity.y, velocity.x);
+		velocity = { speed * glm::cos(angle), speed * glm::sin(angle) };
+
 
 		xEngine::Component::ParticleSystem& ps = getComponent<xEngine::Component::ParticleSystem>();
 		//std::cout << ts.x - ts.y_scale / 2.0f * glm::cos(glm::radians(theta)) << std::endl;
@@ -51,7 +61,13 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	}
 	else
 	{
-		velocity = { 0,0 };
+
+		float speed = glm::sqrt(glm::pow(velocity.x,2)+glm::pow(velocity.y,2));
+		speed -= frictionForce * dt.getSeconds<float>() / mass;
+		if (speed < 0)
+			speed = 0;
+		float angle = std::atan2f(velocity.y, velocity.x);
+		velocity = { speed*glm::cos(angle), speed*glm::sin(angle) };
 	}
 
 	lastPosition = { ts.x, ts.y };
@@ -89,12 +105,6 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	glm::vec2 a = { ts.x + ts.y_scale / 2.0f * glm::cos(glm::radians(theta)),ts.y + ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) };
 	glm::vec2 b = { ts.x - L * glm::sin(glm::radians(90.0f) - glm::radians(theta) - gamma),ts.y - L * glm::cos(glm::radians(90.0f) - glm::radians(theta) - gamma) };
 	glm::vec2 c = { ts.x - L * glm::cos(glm::radians(theta) - gamma),ts.y - L * glm::sin(glm::radians(theta) - gamma) };
-	//xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
-	//Renderer::DrawQuad({ a.x, a.y }, { 5,5 }, 0.0, { 1.0f,0.0f,0.0f,1.0f });
-	//Renderer::DrawQuad({ b.x, b.y }, { 5,5 }, 0.0, { 1.0f,0.0f,0.0f,1.0f });
-	//Renderer::DrawQuad({ c.x, c.y }, { 5,5 }, 0.0, { 1.0f,0.0f,0.0f,1.0f });
-
-
 
 	//check if ship hit asteriod
 	if(getComponent<xEngine::Component::Sprite2DComponent>().visible)
@@ -114,6 +124,7 @@ void ShipScript::onUpdate(DeltaTime& dt)
 				float speed = 500;
 				for (int i = 0; i < 40; i++)
 				{
+					getComponent<xEngine::Component::AudioSource>().PlaySound(1);
 					Explosion.getComponent<xEngine::Component::ParticleSystem>().EmitParticle(
 						{ ts.x - ts.y_scale / 2.0f * glm::cos(glm::radians(theta)), ts.y - ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) },                                          //position
 						Random::get().onUnitCircle()*speed,       //velocity
@@ -137,21 +148,24 @@ void ShipScript::onUpdate(DeltaTime& dt)
 
 void ShipScript::onEvent(Event& event)
 {
-	float BulletSpeed = 600;
+	float BulletSpeed = 950;
 	xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
 	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::space))
 	{
 		if (activeBullets < 4)
 		{
+			float theta = ts.rot + 90.0f;
+			glm::vec2 a = { ts.x + ts.y_scale / 2.0f * glm::cos(glm::radians(theta)),ts.y + ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) };
+
 			getComponent<xEngine::Component::AudioSource>().PlaySound(0);
-			createBullet({ ts.x, ts.y }, { BulletSpeed * glm::cos(glm::radians(ts.rot + 90.0f)),BulletSpeed * glm::sin(glm::radians(ts.rot + 90.0f)) }, Script::getEntity().getScene(), ts.rot, this);
+			createBullet(a, { BulletSpeed * glm::cos(glm::radians(ts.rot + 90.0f)),BulletSpeed * glm::sin(glm::radians(ts.rot + 90.0f)) }, Script::getEntity().getScene(), ts.rot, this);
 			activeBullets++;
 		}
 		
 	}
 	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::P))
 	{
-		createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture);
+		createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture, 3);
 	}
 
 	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::A))
@@ -170,6 +184,19 @@ void ShipScript::onDestroy()
 {
 	Explosion.getComponent<xEngine::Component::ParticleSystem>().Destroy();
 	getEntity().getScene()->destroyEntity(Explosion);
+}
+
+void ShipScript::onGuiUpdate()
+{
+	ImGui::Begin("Physics Properties");
+	ImGui::SliderFloat("angular speed", (float*)&(this->angularSpeed), 0, 360);
+	ImGui::SliderFloat("mass", (float*)&(this->mass), 1.00f, 20.0f);
+	ImGui::SliderFloat("max Speed", (float*)&(this->maxSpeed), 100, 1000);
+	ImGui::SliderFloat("thrust force", (float*)&(this->thrustForce), 100, 2000);
+	ImGui::SliderFloat("frictional force", (float*)&(this->frictionForce), 100, 2000);
+	ImGui::End();
+
+	
 }
 
 bool ShipScript::CircleTriangleCollide(const glm::vec2& circleCenter, float circleRadius, const glm::vec2& a, const glm::vec2& b, const glm::vec2& c)
