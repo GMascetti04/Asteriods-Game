@@ -18,12 +18,18 @@ public:
 			activeBullets = 0;
 	}
 
+	void NewLevel();
+
+
+	int score = 0;
+
 	Texture* asteriodTexture;
 private:
 	glm::vec2 velocity = {0,0};
 	glm::vec2 lastPosition = { 0,0 };
 	Entity Explosion;
 	int activeBullets = 0;
+	
 
 
 	float angularSpeed = 250.0f;

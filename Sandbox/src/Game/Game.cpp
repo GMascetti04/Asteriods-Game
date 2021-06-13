@@ -105,12 +105,13 @@ void onStartup() {
 
 	texture = Texture::ImageTexture("res/textures/Ship.png");
 	Entity ship = myScene.createEntity();
-	ship.addComponent<xEngine::Components::TransformComponent>(0,0,0,30,40);
+	ship.addComponent<xEngine::Components::TransformComponent>(0.0f,0.0f,0.0f,30.0f,40.0f);
 	ship.addComponent<xEngine::Components::Sprite2DComponent>(true, "", 0, texture, Vec4<float>{1.0f,1.0f ,1.0f ,1.0f });
 
 	//bool vis, const char* lay, int ord, SpriteTexture* tex, Vec4<float> col
 	ship.addComponent<xEngine::Components::ScriptComponent>().Attach<ShipScript>(ship);
 	((ShipScript*)(ship.getComponent<xEngine::Components::ScriptComponent>().m_Script))->asteriodTexture = asteriodTexture;
+	((ShipScript*)(ship.getComponent<xEngine::Components::ScriptComponent>().m_Script))->onCreate();
 	ship.addComponent<xEngine::Components::ParticleSystem>(10);
 	xEngine::Components::AudioSource& as = ship.addComponent<xEngine::Components::AudioSource>();
 	as.AddSound(Audio::Get("res/shoot.wav"));

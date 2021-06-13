@@ -7,13 +7,8 @@
 
 void ShipScript::onUpdate(DeltaTime& dt)
 {
-	//float speed = 100.0f;
-	//float angular = 250;
 	xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
-//	float Force = 1000;
-	//float mass = 2;
-	//float friction = 1000;
-	//float maxSpeed = 850;
+
 
 	if (Input::keyPressed(codes::KeyCode::left))
 	{
@@ -163,10 +158,10 @@ void ShipScript::onEvent(xEngine::Event& event)
 		}
 		
 	}
-	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::P))
-	{
-		createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture, 3);
-	}
+	//if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::P))
+	//{
+	//	createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture, 3);
+	//}
 
 	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
 	{
@@ -178,12 +173,13 @@ void ShipScript::onCreate()
 {
 	Explosion = getEntity().getScene()->createEntity();
 	Explosion.addComponent<xEngine::Components::ParticleSystem>(40).Init();
+	NewLevel();
 }
 
 void ShipScript::onDestroy()
 {
 	Explosion.getComponent<xEngine::Components::ParticleSystem>().Destroy();
-	getEntity().getScene()->destroyEntity(Explosion);
+	getEntity().getScene()->destroyEntity(Explosion); 
 }
 
 void ShipScript::onGuiUpdate()
@@ -197,8 +193,27 @@ void ShipScript::onGuiUpdate()
 	ImGui::SliderFloat("frictional force", (float*)&(this->frictionForce), 100, 2000);
 	ImGui::End();
 #endif
-
 	
+
+	std::string scoreString = std::string("Score: ") + std::to_string(score);
+	ImGui::SetNextWindowPos({300,0});
+	ImGui::SetNextWindowSize({ 500,100 });
+	ImGui::Begin("564", (bool*)0, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove
+		| ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings | ImGuiColorEditFlags_NoInputs | ImGuiWindowFlags_NoBackground);
+	ImGui::SetWindowFontScale(2.0f);
+	
+	ImGui::Text(scoreString.c_str());
+	ImGui::End();
+}
+
+void ShipScript::NewLevel()
+{
+	
+		score += 1000;
+		createAsteriod({ 0, 560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f,360.0f), asteriodTexture, 3);
+		createAsteriod({ -560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
+		createAsteriod({ 0, -560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
+		createAsteriod({ 560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
 }
 
 bool ShipScript::CircleTriangleCollide(const glm::vec2& circleCenter, float circleRadius, const glm::vec2& a, const glm::vec2& b, const glm::vec2& c)

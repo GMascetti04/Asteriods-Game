@@ -55,8 +55,23 @@ public:
 				if (CirclePointCollision({ ts.x,ts.y }, { asteriodTransform.x, asteriodTransform.y }, asteriodTransform.x_scale / 2))
 				{
 					shipScript->BulletDied();
+					shipScript->score += 100;
 					//registry.destroyEntity({ ent,getEntity().getScene() });
 					Entity(ent, getEntity().getScene()).getComponent<xEngine::Components::ScriptComponent>().getScript<AsteriodScript>()->BulletHit();
+
+					//get all the entities that have an asteriod script
+					auto l = getEntity().getScene()->getRegistry().View<xEngine::Components::TagComponent>();
+					int i = 0;
+					for (auto ent : l)
+					{
+						if (l.get<xEngine::Components::TagComponent>(ent).m_tag == "Asteriod")
+						{
+							i++;
+						}
+					}
+					if (i == 1)
+						shipScript->NewLevel();
+					
 					getEntity().getScene()->destroyEntity(getEntity());
 					return;
 				}

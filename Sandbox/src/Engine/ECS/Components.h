@@ -112,7 +112,7 @@ namespace xEngine {
 
 				Constructor(*this, entity);
 				m_Script->m_entity = entity;
-				m_Script->onCreate();
+				//m_Script->onCreate();
 			}
 
 			template<typename ScriptClass>
