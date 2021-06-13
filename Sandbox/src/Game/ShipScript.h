@@ -21,18 +21,26 @@ public:
 	void NewLevel();
 
 
-	int score = 0;
+	int score = -1000;
 
 	Texture* asteriodTexture;
 private:
+	enum class GameState
+	{
+		Play, Dead
+	};
+
+	GameState state = GameState::Play;
 	glm::vec2 velocity = {0,0};
 	glm::vec2 lastPosition = { 0,0 };
 	Entity Explosion;
 	int activeBullets = 0;
 	
+	int lives = 5;
 
 
-	float angularSpeed = 250.0f;
+	//physics
+	float angularSpeed = 360.0f; //250
 	float mass = 2.0f;
 	float maxSpeed = 850.0f;
 	float thrustForce = 1000.0f;

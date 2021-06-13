@@ -116,6 +116,12 @@ void ShipScript::onUpdate(DeltaTime& dt)
 				//ship hit an asteriod
 				getComponent<xEngine::Components::Sprite2DComponent>().visible = false;
 
+				lives--;
+				if (lives <= 0)
+				{
+					state = GameState::Dead;
+				}
+
 				float speed = 500;
 				for (int i = 0; i < 40; i++)
 				{
@@ -158,10 +164,15 @@ void ShipScript::onEvent(xEngine::Event& event)
 		}
 		
 	}
-	//if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::P))
-	//{
-	//	createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture, 3);
-	//}
+
+	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::enter))
+	{
+		if (state == GameState::Dead)
+		{
+			state = GameState::Play;
+			lives = 5;
+		}
+	}
 
 	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
 	{
@@ -196,14 +207,27 @@ void ShipScript::onGuiUpdate()
 	
 
 	std::string scoreString = std::string("Score: ") + std::to_string(score);
+	std::string livesString = std::string("       Lives: ") + std::to_string(lives);
 	ImGui::SetNextWindowPos({300,0});
 	ImGui::SetNextWindowSize({ 500,100 });
-	ImGui::Begin("564", (bool*)0, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove
+	ImGui::Begin("Player Info", (bool*)0, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove
 		| ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings | ImGuiColorEditFlags_NoInputs | ImGuiWindowFlags_NoBackground);
 	ImGui::SetWindowFontScale(2.0f);
 	
 	ImGui::Text(scoreString.c_str());
+	ImGui::SameLine();
+	ImGui::Text(livesString.c_str());
 	ImGui::End();
+
+	if (state == GameState::Dead)
+	{
+		ImGui::SetNextWindowPos({350,450});
+		ImGui::Begin("Game Over", (bool*)0, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove
+			| ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings | ImGuiColorEditFlags_NoInputs | ImGuiWindowFlags_NoBackground);
+		ImGui::SetWindowFontScale(2.0f);
+		ImGui::Text("       Game Over \nPress Enter to Restart");
+		ImGui::End();
+	}
 }
 
 void ShipScript::NewLevel()
