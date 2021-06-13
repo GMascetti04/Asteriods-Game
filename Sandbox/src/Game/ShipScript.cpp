@@ -9,7 +9,7 @@ void ShipScript::onUpdate(DeltaTime& dt)
 {
 	//float speed = 100.0f;
 	//float angular = 250;
-	xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
+	xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
 //	float Force = 1000;
 	//float mass = 2;
 	//float friction = 1000;
@@ -25,7 +25,7 @@ void ShipScript::onUpdate(DeltaTime& dt)
 		ts.rot -= this->angularSpeed * dt.getSeconds<float>();
 	}
 
-	if(getComponent<xEngine::Component::Sprite2DComponent>().visible)
+	if(getComponent<xEngine::Components::Sprite2DComponent>().visible)
 	if (Input::keyPressed(codes::KeyCode::left_control))
 	{
 		//x-direction
@@ -45,7 +45,7 @@ void ShipScript::onUpdate(DeltaTime& dt)
 		velocity = { speed * glm::cos(angle), speed * glm::sin(angle) };
 
 
-		xEngine::Component::ParticleSystem& ps = getComponent<xEngine::Component::ParticleSystem>();
+		xEngine::Components::ParticleSystem& ps = getComponent<xEngine::Components::ParticleSystem>();
 		//std::cout << ts.x - ts.y_scale / 2.0f * glm::cos(glm::radians(theta)) << std::endl;
 		ps.EmitParticle(
 			{ ts.x - ts.y_scale / 2.0f * glm::cos(glm::radians(theta)), ts.y - ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) },                                          //position
@@ -97,7 +97,7 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	float theta = ts.rot + 90.0f;
 	//std::cout << "theta: " << theta << std::endl;
 	//check for collision
-	auto Asteriods = getEntity().getScene()->getRegistry().View<xEngine::Component::TagComponent>();
+	auto Asteriods = getEntity().getScene()->getRegistry().View<xEngine::Components::TagComponent>();
 	Registry& registry = getEntity().getScene()->getRegistry();
 	float gamma = glm::atan(ts.x_scale / ts.y_scale); //in radians
 	float L = 0.5f * glm::sqrt(ts.y_scale * ts.y_scale + ts.x_scale * ts.x_scale);
@@ -107,25 +107,25 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	glm::vec2 c = { ts.x - L * glm::cos(glm::radians(theta) - gamma),ts.y - L * glm::sin(glm::radians(theta) - gamma) };
 
 	//check if ship hit asteriod
-	if(getComponent<xEngine::Component::Sprite2DComponent>().visible)
+	if(getComponent<xEngine::Components::Sprite2DComponent>().visible)
 	for (auto ent : Asteriods)
 	{
 		
-		if (registry.getComponent<xEngine::Component::TagComponent>({ ent,getEntity().getScene() }).m_tag = "Asteriod")
+		if (registry.getComponent<xEngine::Components::TagComponent>({ ent,getEntity().getScene() }).m_tag = "Asteriod")
 		{
 			//std::cout << "check" << std::endl;
-			xEngine::Component::TransformComponent& asteriodTransform = registry.getComponent<xEngine::Component::TransformComponent>(Entity(ent, getEntity().getScene()));
+			xEngine::Components::TransformComponent& asteriodTransform = registry.getComponent<xEngine::Components::TransformComponent>(Entity(ent, getEntity().getScene()));
 		
 			if (CircleTriangleCollide({ asteriodTransform.x,asteriodTransform.y }, asteriodTransform.y_scale / 2.0f, a, b, c))
 			{
 				//ship hit an asteriod
-				getComponent<xEngine::Component::Sprite2DComponent>().visible = false;
+				getComponent<xEngine::Components::Sprite2DComponent>().visible = false;
 
 				float speed = 500;
 				for (int i = 0; i < 40; i++)
 				{
-					getComponent<xEngine::Component::AudioSource>().PlaySound(1);
-					Explosion.getComponent<xEngine::Component::ParticleSystem>().EmitParticle(
+					getComponent<xEngine::Components::AudioSource>().PlaySound(1);
+					Explosion.getComponent<xEngine::Components::ParticleSystem>().EmitParticle(
 						{ ts.x - ts.y_scale / 2.0f * glm::cos(glm::radians(theta)), ts.y - ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) },                                          //position
 						Random::get().onUnitCircle()*speed,       //velocity
 						{ 0,0 }, //acceleration
@@ -146,48 +146,49 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	//std::cout << "x: " << ts.x << " y: " << ts.y << std::endl;
 }
 
-void ShipScript::onEvent(Event& event)
+void ShipScript::onEvent(xEngine::Event& event)
 {
 	float BulletSpeed = 950;
-	xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
-	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::space))
+	xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
+	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::space))
 	{
 		if (activeBullets < 4)
 		{
 			float theta = ts.rot + 90.0f;
 			glm::vec2 a = { ts.x + ts.y_scale / 2.0f * glm::cos(glm::radians(theta)),ts.y + ts.y_scale / 2.0f * glm::sin(glm::radians(theta)) };
 
-			getComponent<xEngine::Component::AudioSource>().PlaySound(0);
+			getComponent<xEngine::Components::AudioSource>().PlaySound(0);
 			createBullet(a, { BulletSpeed * glm::cos(glm::radians(ts.rot + 90.0f)),BulletSpeed * glm::sin(glm::radians(ts.rot + 90.0f)) }, Script::getEntity().getScene(), ts.rot, this);
 			activeBullets++;
 		}
 		
 	}
-	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::P))
+	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::P))
 	{
 		createAsteriod({0.0,0.0}, {100,100}, Script::getEntity().getScene(), 0.0f, asteriodTexture, 3);
 	}
 
-	if (Event::checkProperty<KeyPressEvent>(event, &KeyPressEvent::get_keyCode, codes::KeyCode::A))
+	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
 	{
-		getComponent<xEngine::Component::Sprite2DComponent>().visible = true;
+		getComponent<xEngine::Components::Sprite2DComponent>().visible = true;
 	}
 }
 
 void ShipScript::onCreate()
 {
 	Explosion = getEntity().getScene()->createEntity();
-	Explosion.addComponent<xEngine::Component::ParticleSystem>(40).Init();
+	Explosion.addComponent<xEngine::Components::ParticleSystem>(40).Init();
 }
 
 void ShipScript::onDestroy()
 {
-	Explosion.getComponent<xEngine::Component::ParticleSystem>().Destroy();
+	Explosion.getComponent<xEngine::Components::ParticleSystem>().Destroy();
 	getEntity().getScene()->destroyEntity(Explosion);
 }
 
 void ShipScript::onGuiUpdate()
 {
+#if 0
 	ImGui::Begin("Physics Properties");
 	ImGui::SliderFloat("angular speed", (float*)&(this->angularSpeed), 0, 360);
 	ImGui::SliderFloat("mass", (float*)&(this->mass), 1.00f, 20.0f);
@@ -195,6 +196,7 @@ void ShipScript::onGuiUpdate()
 	ImGui::SliderFloat("thrust force", (float*)&(this->thrustForce), 100, 2000);
 	ImGui::SliderFloat("frictional force", (float*)&(this->frictionForce), 100, 2000);
 	ImGui::End();
+#endif
 
 	
 }

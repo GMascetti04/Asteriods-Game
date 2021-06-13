@@ -8,7 +8,7 @@ class AsteriodScript : public xEngine::Script
 public:
 	virtual void onUpdate(DeltaTime& dt) override
 	{
-		xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
+		xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
 		ts.x += velocity.x * dt.getSeconds<float>();
 		ts.y += velocity.y * dt.getSeconds<float>();
 
@@ -38,8 +38,8 @@ public:
 			//spawn 2 new asteriods in its place
 			
 			//std::cout << level << std::endl;
-			xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
-			xEngine::Component::Sprite2DComponent& sprite = getComponent<xEngine::Component::Sprite2DComponent>();
+			xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
+			xEngine::Components::Sprite2DComponent& sprite = getComponent<xEngine::Components::Sprite2DComponent>();
 			Texture* text = ((Texture*)sprite.texture);
 			float x = ts.x;
 			float y = ts.y;

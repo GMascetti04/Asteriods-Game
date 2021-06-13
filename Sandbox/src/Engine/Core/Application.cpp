@@ -86,14 +86,14 @@ void engineGuiUpdate() { //enocurperae into the loop
 
 
 
-static bool resize(Event& event) {
-	WindowResizeEvent& resize_event = *(WindowResizeEvent*)(&event);
+static bool resize(xEngine::Event& event) {
+	xEngine::Events::WindowResizeEvent& resize_event = *(xEngine::Events::WindowResizeEvent*)(&event);
 	s_window->setHeight(resize_event.get_height());
 	s_window->setWidth(resize_event.get_width());
 	return false;
 }
 
-static bool close(Event& closeEvent) {
+static bool close(xEngine::Event& closeEvent) {
 	xENGINE_PROFILE_FUNCTION();
 	if (!closeEvent.m_handled)
 	{
@@ -118,21 +118,21 @@ void end() {
 	delete s_Scenes;
 }
 
-static bool set_focus(Event& event) {
+static bool set_focus(xEngine::Event& event) {
 	s_isFocused = true;
 	s_lastTime = glfwGetTime();
 	return true;
 }
 
-static bool remove_focus(Event& event) {
+static bool remove_focus(xEngine::Event& event) {
 	s_isFocused = false;
 	return true;
 }
 
-static void onEvent(Event& event) {
+static void onEvent(xEngine::Event& event) {
 	xENGINE_PROFILE_FUNCTION();
 
-	if (Event::isEvent<WindowSetFocusEvent>(event) && !event.m_handled)
+	if (xEngine::Event::isEvent<xEngine::Events::WindowSetFocusEvent>(event) && !event.m_handled)
 		set_focus(event);
 
 	if (!s_isFocused) 
@@ -143,13 +143,13 @@ static void onEvent(Event& event) {
 
 	switch (event.get_type())
 	{
-	case WindowCloseEvent::getEventType() :
+	case xEngine::Events::WindowCloseEvent::getEventType() :
 		close(event);
 		break;
-	case WindowResizeEvent::getEventType() :
+	case xEngine::Events::WindowResizeEvent::getEventType() :
 		resize(event);
 		break;
-	case WindowRemoveFocusEvent::getEventType(): 
+	case xEngine::Events::WindowRemoveFocusEvent::getEventType():
 		remove_focus(event);
 		break;
 
@@ -160,8 +160,8 @@ static void onEvent(Event& event) {
 
 	//check if the event is engine-specific ctrl-function key
 	switch (event.get_type()) {
-	case Event::EventType::key_press:
-		if (Event::EventCast<KeyPressEvent>(event).get_keyCode() == codes::KeyCode::f5) //EVENT(KeyPressedEvent, event).get_keyCode() == codes::KeyCode::f5
+	case xEngine::Event::EventType::key_press:
+		if (xEngine::Event::EventCast<xEngine::Events::KeyPressEvent>(event).get_keyCode() == codes::KeyCode::f5) //EVENT(KeyPressedEvent, event).get_keyCode() == codes::KeyCode::f5
 			if (Input::keyPressed(codes::KeyCode::left_control))
 				s_displayDebugWindow = !s_displayDebugWindow;
 		break;

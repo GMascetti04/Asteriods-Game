@@ -17,7 +17,7 @@
 
 namespace xEngine {
 
-	namespace Component
+	namespace Components
 	{
 		struct ScriptComponent;
 	}
@@ -60,12 +60,12 @@ namespace xEngine {
 
 	private:
 		friend class Scene;
-		friend struct xEngine::Component::ScriptComponent;
+		friend struct xEngine::Components::ScriptComponent;
 		Entity m_entity;
 	};
 	
 
-	namespace Component {
+	namespace Components {
 
 		struct TagComponent {
 			TagComponent(const char* str) : m_tag(str) { }

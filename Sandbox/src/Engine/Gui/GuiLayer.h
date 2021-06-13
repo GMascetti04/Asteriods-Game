@@ -9,5 +9,5 @@ namespace GuiLayer {
 	void Begin();
 	void End();
 
-	bool handledEvent(Event& event);
+	bool handledEvent(xEngine::Event& event);
 }

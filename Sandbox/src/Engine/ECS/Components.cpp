@@ -20,7 +20,7 @@ namespace xEngine {
     }
 }
 
-void xEngine::Component::ParticleSystem::Update(DeltaTime& dt)
+void xEngine::Components::ParticleSystem::Update(DeltaTime& dt)
 {
     //make make this concurrent somehow
     for (int i = 0; i < maxParticles; i++)

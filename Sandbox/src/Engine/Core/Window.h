@@ -3,7 +3,7 @@
 #include "Event.h"
 #include "Engine/Debug/Profiler.h"
 
-typedef void(*EventCallbackFuntion)(Event&);
+typedef void(*EventCallbackFuntion)(xEngine::Event&);
 struct GLFWwindow;
 struct windowProperties {
 	std::string name;

@@ -570,7 +570,7 @@ struct particleVertex {
 	}
 };
 
-void Renderer::DrawParticleSystem(xEngine::Component::ParticleSystem& ps)
+void Renderer::DrawParticleSystem(xEngine::Components::ParticleSystem& ps)
 {
 	for (int i = 0; i < ps.maxParticles; i++)
 	{
@@ -581,7 +581,7 @@ void Renderer::DrawParticleSystem(xEngine::Component::ParticleSystem& ps)
 	}
 }
 
-void Renderer::DrawEntity(xEngine::Component::Sprite2DComponent& sprite, xEngine::Component::TransformComponent& transform)
+void Renderer::DrawEntity(xEngine::Components::Sprite2DComponent& sprite, xEngine::Components::TransformComponent& transform)
 {
 	
 	if(sprite.texture)

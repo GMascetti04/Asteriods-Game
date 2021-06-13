@@ -6,7 +6,7 @@ class ShipScript : public xEngine::Script
 {
 public:
 	virtual void onUpdate(DeltaTime& dt) override;
-	virtual void onEvent(Event& event) override;
+	virtual void onEvent(xEngine::Event& event) override;
 	virtual void onCreate() override;
 	virtual void onDestroy() override;
 	virtual void onGuiUpdate() override;

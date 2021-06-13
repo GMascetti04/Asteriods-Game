@@ -56,33 +56,33 @@ Window::Window(windowProperties props)
 
 	//set callbacks
 	glfwSetWindowSizeCallback(m_window, [](GLFWwindow* window, int w, int h) {
-		WindowResizeEvent event(w, h);
+		xEngine::Events::WindowResizeEvent event(w, h);
 		WINDOW_DATA(window).func(event);
 		});
 
 	glfwSetWindowFocusCallback(m_window, [](GLFWwindow* window, int focused) {
 		if (focused == GLFW_TRUE) { //window was given focus
-			WindowSetFocusEvent event;
+			xEngine::Events::WindowSetFocusEvent event;
 			WINDOW_DATA(window).func(event);
 		}
 		else {
-			WindowRemoveFocusEvent event;
+			xEngine::Events::WindowRemoveFocusEvent event;
 			WINDOW_DATA(window).func(event);
 		}
 		});
 
 	glfwSetWindowCloseCallback(m_window, [](GLFWwindow* window) {
-		WindowCloseEvent d;
+		xEngine::Events::WindowCloseEvent d;
 		WINDOW_DATA(window).func(d);
 		});
 
 	glfwSetWindowMaximizeCallback(m_window, [](GLFWwindow* window, int maximized) {
 		if (maximized == GLFW_TRUE)
 		{
-			WindowMaximizeEvent event;
+			xEngine::Events::WindowMaximizeEvent event;
 			WINDOW_DATA(window).func(event);
 		} else {
-			WindowRestoreEvent event;
+			xEngine::Events::WindowRestoreEvent event;
 			WINDOW_DATA(window).func(event);
 		}
 
@@ -91,46 +91,46 @@ Window::Window(windowProperties props)
 	glfwSetKeyCallback(m_window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
 		if (action == GLFW_PRESS)
 		{
-			KeyPressEvent event((codes::KeyCode)key);
+			xEngine::Events::KeyPressEvent event((codes::KeyCode)key);
 			WINDOW_DATA(window).func(event);
 		}
 		else if (action == GLFW_RELEASE)
 		{
-			KeyReleaseEvent event((codes::KeyCode)key);
+			xEngine::Events::KeyReleaseEvent event((codes::KeyCode)key);
 			WINDOW_DATA(window).func(event);
 		}
 		else
 		{
-			KeyRepeatEvent event((codes::KeyCode)key);
+			xEngine::Events::KeyRepeatEvent event((codes::KeyCode)key);
 			WINDOW_DATA(window).func(event);
 		}
 		});
 
 	glfwSetCharCallback(m_window, [](GLFWwindow* window, unsigned int codepoint) {
-		CharInputEvent event(codepoint);
+		xEngine::Events::CharInputEvent event(codepoint);
 		WINDOW_DATA(window).func(event);
 		});
 
 	glfwSetMouseButtonCallback(m_window, [](GLFWwindow* window, int button, int action, int mods) {
 		if (action == GLFW_PRESS) {
-			MouseButtonPressEvent event((codes::MouseCode)button);
+			xEngine::Events::MouseButtonPressEvent event((codes::MouseCode)button);
 			WINDOW_DATA(window).func(event);
 		}
 		else { 
-			MouseButtonReleaseEvent event((codes::MouseCode)button);
+			xEngine::Events::MouseButtonReleaseEvent event((codes::MouseCode)button);
 			WINDOW_DATA(window).func(event);
 		}
 		});
 
 	glfwSetScrollCallback(m_window, [](GLFWwindow* window, double x, double y) {
 		if (x == 0) { 
-			MouseScrollEvent event(y);
+			xEngine::Events::MouseScrollEvent event(y);
 			WINDOW_DATA(window).func(event);
 		}
 		});
 
 	glfwSetCursorPosCallback(m_window, [](GLFWwindow* window, double xpos, double ypos) {
-		MouseMoveEvent event(xpos, ypos);
+		xEngine::Events::MouseMoveEvent event(xpos, ypos);
 		WINDOW_DATA(window).func(event);
 		});
 }

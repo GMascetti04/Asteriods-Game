@@ -61,18 +61,18 @@ void GuiLayer::End() {
 static bool s_filter_events = true;
 
 //returns true if the event was used by the gui layer
-bool GuiLayer::handledEvent(Event& event) {
+bool GuiLayer::handledEvent(xEngine::Event& event) {
 	if (s_filter_events)
 	{
 		ImGuiIO& io = ImGui::GetIO(); (void)io;
 		if (io.WantCaptureMouse) {
-			if (event.get_categories() & (Event::EventCategory::mouse | Event::EventCategory::mouse_button)) {
+			if (event.get_categories() & (xEngine::Event::EventCategory::mouse | xEngine::Event::EventCategory::mouse_button)) {
 				event.m_handled = true;
 				return true;
 			}
 		}
 		if (io.WantCaptureKeyboard) {
-			if (event.get_categories() & (Event::EventCategory::keyboard)) {
+			if (event.get_categories() & (xEngine::Event::EventCategory::keyboard)) {
 				event.m_handled = true;
 				return true;
 			}

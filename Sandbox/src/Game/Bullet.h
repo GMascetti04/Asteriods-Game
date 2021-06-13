@@ -21,7 +21,7 @@ public:
 			xEngine::Script::getEntity().getScene()->destroyEntity(xEngine::Script::getEntity());
 			return;	
 		}
-		xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
+		xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
 		ts.x += dt.getSeconds<float>() * velocity.x;
 		ts.y += dt.getSeconds<float>() * velocity.y;
 
@@ -43,20 +43,20 @@ public:
 			ts.y = -560;
 		}
 		//see if any asteriods where hit
-		auto Asteriods = getEntity().getScene()->getRegistry().View<xEngine::Component::TagComponent>();
+		auto Asteriods = getEntity().getScene()->getRegistry().View<xEngine::Components::TagComponent>();
 		Registry &registry = getEntity().getScene()->getRegistry();
 		//xEngine::Component::TransformComponent& ts = getComponent<xEngine::Component::TransformComponent>();
 		for (auto ent : Asteriods)
 		{
-			if (registry.getComponent<xEngine::Component::TagComponent>({ ent,getEntity().getScene() }).m_tag = "Asteriod")
+			if (registry.getComponent<xEngine::Components::TagComponent>({ ent,getEntity().getScene() }).m_tag = "Asteriod")
 			{
 				//std::cout << "check" << std::endl;
-				xEngine::Component::TransformComponent& asteriodTransform = registry.getComponent<xEngine::Component::TransformComponent>(Entity(ent, getEntity().getScene()));
+				xEngine::Components::TransformComponent& asteriodTransform = registry.getComponent<xEngine::Components::TransformComponent>(Entity(ent, getEntity().getScene()));
 				if (CirclePointCollision({ ts.x,ts.y }, { asteriodTransform.x, asteriodTransform.y }, asteriodTransform.x_scale / 2))
 				{
 					shipScript->BulletDied();
 					//registry.destroyEntity({ ent,getEntity().getScene() });
-					Entity(ent, getEntity().getScene()).getComponent<xEngine::Component::ScriptComponent>().getScript<AsteriodScript>()->BulletHit();
+					Entity(ent, getEntity().getScene()).getComponent<xEngine::Components::ScriptComponent>().getScript<AsteriodScript>()->BulletHit();
 					getEntity().getScene()->destroyEntity(getEntity());
 					return;
 				}

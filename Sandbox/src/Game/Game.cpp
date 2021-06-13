@@ -65,7 +65,7 @@ void onStartup() {
 
 
 	myScene.useCamera(new CameraController(myCam));
-	myScene.getCameraController()->setEventFunction([](Event& event, CameraController& camController) {
+	myScene.getCameraController()->setEventFunction([](xEngine::Event& event, CameraController& camController) {
 		float padding = 0.1f;
 		float x_len = application::getWindow()->getWidth() * (1 - 2 * padding);
 		float y_len = application::getWindow()->getHeight() * (1 - 2 * padding);
@@ -73,7 +73,7 @@ void onStartup() {
 		float length;
 
 		camController.getAspectRatio() = (float)application::getWindow()->getWidth() / (float)application::getWindow()->getHeight();
-		if (Event::isEvent<WindowResizeEvent>(event) || Event::isEvent<WindowMaximizeEvent>(event) || Event::isEvent<WindowRestoreEvent>(event))
+		if (xEngine::Event::isEvent<xEngine::Events::WindowResizeEvent>(event) || xEngine::Event::isEvent<xEngine::Events::WindowMaximizeEvent>(event) || xEngine::Event::isEvent<xEngine::Events::WindowRestoreEvent>(event))
 		{
 			if (y_len < x_len) //height is smaller
 			{
@@ -105,14 +105,14 @@ void onStartup() {
 
 	texture = Texture::ImageTexture("res/textures/Ship.png");
 	Entity ship = myScene.createEntity();
-	ship.addComponent<xEngine::Component::TransformComponent>(0,0,0,30,40);
-	ship.addComponent<xEngine::Component::Sprite2DComponent>(true, "", 0, texture, Vec4<float>{1.0f,1.0f ,1.0f ,1.0f });
+	ship.addComponent<xEngine::Components::TransformComponent>(0,0,0,30,40);
+	ship.addComponent<xEngine::Components::Sprite2DComponent>(true, "", 0, texture, Vec4<float>{1.0f,1.0f ,1.0f ,1.0f });
 
 	//bool vis, const char* lay, int ord, SpriteTexture* tex, Vec4<float> col
-	ship.addComponent<xEngine::Component::ScriptComponent>().Attach<ShipScript>(ship);
-	((ShipScript*)(ship.getComponent<xEngine::Component::ScriptComponent>().m_Script))->asteriodTexture = asteriodTexture;
-	ship.addComponent<xEngine::Component::ParticleSystem>(10);
-	xEngine::Component::AudioSource& as = ship.addComponent<xEngine::Component::AudioSource>();
+	ship.addComponent<xEngine::Components::ScriptComponent>().Attach<ShipScript>(ship);
+	((ShipScript*)(ship.getComponent<xEngine::Components::ScriptComponent>().m_Script))->asteriodTexture = asteriodTexture;
+	ship.addComponent<xEngine::Components::ParticleSystem>(10);
+	xEngine::Components::AudioSource& as = ship.addComponent<xEngine::Components::AudioSource>();
 	as.AddSound(Audio::Get("res/shoot.wav"));
 	as.getProperties(0).playOnAwake = false;
 	as.getProperties(0).loop = false;

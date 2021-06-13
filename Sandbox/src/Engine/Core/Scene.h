@@ -11,7 +11,7 @@ public:
 	Scene(const char* name) :m_name(name), m_nextPriority(0) {}
 	~Scene() {}
 
-	bool pushEvent(Event& event);
+	bool pushEvent(xEngine::Event& event);
 	void onUpdate(DeltaTime& ts); 
 	
 	void useCamera(CameraController* cam);

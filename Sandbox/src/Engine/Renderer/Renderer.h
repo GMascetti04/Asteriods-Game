@@ -24,8 +24,8 @@ public:
 	static void Init();
 	static void Shutdown();
 
-	static void DrawParticleSystem(xEngine::Component::ParticleSystem& ps);
-	static void DrawEntity(xEngine::Component::Sprite2DComponent& sprite, xEngine::Component::TransformComponent& transform);
+	static void DrawParticleSystem(xEngine::Components::ParticleSystem& ps);
+	static void DrawEntity(xEngine::Components::Sprite2DComponent& sprite, xEngine::Components::TransformComponent& transform);
 
 	static void StartFrame();
 	static void EndFrame();

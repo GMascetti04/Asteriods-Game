@@ -25,9 +25,9 @@ public:
 	void destroyEntity(Entity ent)
 	{
 		//std::cout << "Kill: " << (int)ent.m_id << std::endl;
-		if (ent.hasComponent<xEngine::Component::ScriptComponent>())
+		if (ent.hasComponent<xEngine::Components::ScriptComponent>())
 		{
-			m_registry.get<xEngine::Component::ScriptComponent>(ent.getID()).Destructor(m_registry.get<xEngine::Component::ScriptComponent>(ent.getID()));
+			m_registry.get<xEngine::Components::ScriptComponent>(ent.getID()).Destructor(m_registry.get<xEngine::Components::ScriptComponent>(ent.getID()));
 
 		}
 		m_registry.destroy(ent.m_id);

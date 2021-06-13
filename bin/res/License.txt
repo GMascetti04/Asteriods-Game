@@ -1,0 +1,4 @@
+explosion.wav - https://freesound.org/people/jalastram/sounds/317749/     (Creative Commons Atribution License) jalastram 
+shoot.wav - https://freesound.org/people/LittleRobotSoundFactory/sounds/270344/   (Creative Commons Atribution License) LittleRobotSoundFactory
+asteriod.png - https://www.pngegg.com/en/png-zvdhq  (Non-commercial use, DMCA)
+Ship.png - modified from   https://www.pngegg.com/en/png-ktgir  (Non-commercial use, DMCA)

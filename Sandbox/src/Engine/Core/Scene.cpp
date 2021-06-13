@@ -17,15 +17,15 @@
 extern void engineGuiUpdate();
 #endif
 
-bool Scene::pushEvent(Event& event)
+bool Scene::pushEvent(xEngine::Event& event)
 {
 	xENGINE_PROFILE_FUNCTION();
 	m_cameraController->m_onEventFunction(event, *m_cameraController);
-	auto script_entities = m_registry.View<xEngine::Component::ScriptComponent>();
+	auto script_entities = m_registry.View<xEngine::Components::ScriptComponent>();
 
 	for (auto ent : script_entities)
 	{
-		script_entities.get<xEngine::Component::ScriptComponent>(ent).m_Script->onEvent(event);
+		script_entities.get<xEngine::Components::ScriptComponent>(ent).m_Script->onEvent(event);
 
 	}
 
@@ -38,7 +38,7 @@ void Scene::onUpdate(DeltaTime& deltaTime)
 
 	Renderer::StartFrame();
 	Renderer::Clear();
-	auto ScriptEntities = m_registry.View<xEngine::Component::ScriptComponent>();
+	auto ScriptEntities = m_registry.View<xEngine::Components::ScriptComponent>();
 	//std::cout << "----" << std::endl;
 	for (auto entity : ScriptEntities)
 	{
@@ -47,7 +47,7 @@ void Scene::onUpdate(DeltaTime& deltaTime)
 			continue;
 		}
 		//std::cout << (int)entity << std::endl;
-		ScriptEntities.get<xEngine::Component::ScriptComponent>(entity).m_Script->onUpdate(deltaTime);
+		ScriptEntities.get<xEngine::Components::ScriptComponent>(entity).m_Script->onUpdate(deltaTime);
 	}
 	
 	m_cameraController->m_onUpdateFunction(deltaTime, *m_cameraController);
@@ -55,18 +55,18 @@ void Scene::onUpdate(DeltaTime& deltaTime)
 
 	
 	
-	auto renderable_entities = m_registry.Group<xEngine::Component::Sprite2DComponent, xEngine::Component::TransformComponent>();
+	auto renderable_entities = m_registry.Group<xEngine::Components::Sprite2DComponent, xEngine::Components::TransformComponent>();
 
-	renderable_entities.sort<xEngine::Component::Sprite2DComponent>([this](const auto& lhs, const auto& rhs) {
+	renderable_entities.sort<xEngine::Components::Sprite2DComponent>([this](const auto& lhs, const auto& rhs) {
 		if (this->getRenderLayerPriority((lhs.layer)) != this->getRenderLayerPriority(rhs.layer))
 			return this->getRenderLayerPriority(lhs.layer) < this->getRenderLayerPriority(rhs.layer);
 		return lhs.order < rhs.order;
 		});
 
-	auto ParticleEntities = m_registry.View<xEngine::Component::ParticleSystem>();
+	auto ParticleEntities = m_registry.View<xEngine::Components::ParticleSystem>();
 	for (auto ent : ParticleEntities)
 	{
-		xEngine::Component::ParticleSystem& ps = ParticleEntities.get<xEngine::Component::ParticleSystem>(ent);
+		xEngine::Components::ParticleSystem& ps = ParticleEntities.get<xEngine::Components::ParticleSystem>(ent);
 		ps.Update(deltaTime);
 
 		Renderer::DrawParticleSystem(ps);
@@ -77,8 +77,8 @@ void Scene::onUpdate(DeltaTime& deltaTime)
 
 	for (auto it = renderable_entities.begin(); it != renderable_entities.end(); it++)
 	{
-		xEngine::Component::TransformComponent& transform = renderable_entities.get<xEngine::Component::TransformComponent>(*it);
-		xEngine::Component::Sprite2DComponent& sprite = renderable_entities.get<xEngine::Component::Sprite2DComponent>(*it);
+		xEngine::Components::TransformComponent& transform = renderable_entities.get<xEngine::Components::TransformComponent>(*it);
+		xEngine::Components::Sprite2DComponent& sprite = renderable_entities.get<xEngine::Components::Sprite2DComponent>(*it);
 		if (sprite.visible)
 			Renderer::DrawEntity(sprite, transform);
 	}
@@ -95,7 +95,7 @@ void Scene::onUpdate(DeltaTime& deltaTime)
 	GuiLayer::Begin();
 	
 	for (auto entity : ScriptEntities)
-		ScriptEntities.get<xEngine::Component::ScriptComponent>(entity).m_Script->onGuiUpdate();
+		ScriptEntities.get<xEngine::Components::ScriptComponent>(entity).m_Script->onGuiUpdate();
 
 #if defined(DEBUG) || defined(RELEASE)
 	engineGuiUpdate();
@@ -138,10 +138,10 @@ void Scene::LoadScene(Scene* scene)
 	//}
 
 	//TEMP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	auto AudioEntities = scene->m_registry.View<xEngine::Component::AudioSource>();
+	auto AudioEntities = scene->m_registry.View<xEngine::Components::AudioSource>();
 	for (auto ent : AudioEntities)
 	{
-		xEngine::Component::AudioSource& audioSource = AudioEntities.get<xEngine::Component::AudioSource>(ent);
+		xEngine::Components::AudioSource& audioSource = AudioEntities.get<xEngine::Components::AudioSource>(ent);
 		size_t count = audioSource.getSoundNumber();
 		for (size_t i = 0; i < count; i++)
 		{
@@ -157,10 +157,10 @@ void Scene::LoadScene(Scene* scene)
 		
 	}
 
-	auto ParticleEntities = scene->m_registry.View<xEngine::Component::ParticleSystem>();
+	auto ParticleEntities = scene->m_registry.View<xEngine::Components::ParticleSystem>();
 	for (auto ent : ParticleEntities)
 	{
-		xEngine::Component::ParticleSystem& ps = ParticleEntities.get<xEngine::Component::ParticleSystem>(ent);
+		xEngine::Components::ParticleSystem& ps = ParticleEntities.get<xEngine::Components::ParticleSystem>(ent);
 		ps.Init();
 	}
 }
@@ -168,18 +168,18 @@ void Scene::LoadScene(Scene* scene)
 void Scene::CloseScene(Scene* scene)
 {
 	xENGINE_PROFILE_FUNCTION();
-	auto view = scene->m_registry.View<xEngine::Component::ScriptComponent>();
+	auto view = scene->m_registry.View<xEngine::Components::ScriptComponent>();
 	for (auto entity : view)
 	{
 		
-		view.get<xEngine::Component::ScriptComponent>(entity).m_Script->onDestroy();
-		view.get<xEngine::Component::ScriptComponent>(entity).Destructor(view.get<xEngine::Component::ScriptComponent>(entity));
+		view.get<xEngine::Components::ScriptComponent>(entity).m_Script->onDestroy();
+		view.get<xEngine::Components::ScriptComponent>(entity).Destructor(view.get<xEngine::Components::ScriptComponent>(entity));
 	}
 	
-	auto Audios = scene->m_registry.View<xEngine::Component::AudioSource>();
+	auto Audios = scene->m_registry.View<xEngine::Components::AudioSource>();
 	for (auto ent : Audios)
 	{
-		xEngine::Component::AudioSource& source = Audios.get<xEngine::Component::AudioSource>(ent);
+		xEngine::Components::AudioSource& source = Audios.get<xEngine::Components::AudioSource>(ent);
 		for (int i = 0; i < source.m_Sounds.size(); i++)
 		{
 			delete source.m_Sounds[i];
@@ -191,10 +191,10 @@ void Scene::CloseScene(Scene* scene)
 			delete m_Sounds[i];
 		}*/
 
-	auto ParticleEntities = scene->m_registry.View<xEngine::Component::ParticleSystem>();
+	auto ParticleEntities = scene->m_registry.View<xEngine::Components::ParticleSystem>();
 	for (auto ent : ParticleEntities)
 	{
-		xEngine::Component::ParticleSystem& ps = ParticleEntities.get<xEngine::Component::ParticleSystem>(ent);
+		xEngine::Components::ParticleSystem& ps = ParticleEntities.get<xEngine::Components::ParticleSystem>(ent);
 		ps.Destroy();
 	}
 }

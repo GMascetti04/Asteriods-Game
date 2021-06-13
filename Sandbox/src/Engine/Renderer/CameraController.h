@@ -38,5 +38,5 @@ private:
 	float m_CamHeight;
 	float m_aspectRatio;
 	std::function<void(DeltaTime&, CameraController&)> m_onUpdateFunction = [](DeltaTime& dt, CameraController& camController) {};
-	std::function<void(Event&, CameraController&)> m_onEventFunction = [](Event& event, CameraController& camController) {};
+	std::function<void(xEngine::Event&, CameraController&)> m_onEventFunction = [](xEngine::Event& event, CameraController& camController) {};
 };
