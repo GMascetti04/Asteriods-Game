@@ -27,7 +27,7 @@ public:
 private:
 	enum class GameState
 	{
-		Play, Dead
+		Play, Dead, Respawn
 	};
 
 	GameState state = GameState::Play;
@@ -38,6 +38,11 @@ private:
 	
 	int lives = 5;
 
+	float respawnTime = 0.0f; //in seconds
+	const float TIME_RESPAWN = 2.0f;
+	//TODO work on this later
+	//float invincibilityTime = 3.0f;
+	//const float TIME_INVINCIBLE = 3.0f;
 
 	//physics
 	float angularSpeed = 360.0f; //250

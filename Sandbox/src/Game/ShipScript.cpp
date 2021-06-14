@@ -121,7 +121,10 @@ void ShipScript::onUpdate(DeltaTime& dt)
 				{
 					state = GameState::Dead;
 				}
-
+				else
+				{
+					state = GameState::Respawn;
+				}
 				float speed = 500;
 				for (int i = 0; i < 40; i++)
 				{
@@ -143,8 +146,25 @@ void ShipScript::onUpdate(DeltaTime& dt)
 	}
 
 
+	//respawn
+	if (state == GameState::Respawn)
+	{
+		this->respawnTime += dt.getSeconds<float>();
+		if (respawnTime >= TIME_RESPAWN)
+		{
+			//time to respond
+			state = GameState::Play;
+			respawnTime = 0.0f;
+			ts.x = 0;
+			ts.y = 0;
+			velocity = { 0,0 };
+			ts.rot = 0.0f;
+			getComponent<xEngine::Components::Sprite2DComponent>().visible = true;
+		}
+	}
 
-	//std::cout << "x: " << ts.x << " y: " << ts.y << std::endl;
+
+
 }
 
 void ShipScript::onEvent(xEngine::Event& event)
@@ -171,13 +191,29 @@ void ShipScript::onEvent(xEngine::Event& event)
 		{
 			state = GameState::Play;
 			lives = 5;
+			score = 0;
+			ts.x = 0;
+			ts.y = 0;
+			ts.rot = 0.0f;
+			getComponent<xEngine::Components::Sprite2DComponent>().visible = true;
+
+			//remove all asteriods
+			auto Asteriods = getEntity().getScene()->getRegistry().View<xEngine::Components::TagComponent>();
+			for (auto ent : Asteriods)
+			{
+				if (Asteriods.get<xEngine::Components::TagComponent>(ent).m_tag == "Asteriod")
+				{
+					getEntity().getScene()->destroyEntity(Entity{ent, getEntity().getScene()});
+				}
+			}
+			NewLevel();
 		}
 	}
 
-	if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
+	/*if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
 	{
 		getComponent<xEngine::Components::Sprite2DComponent>().visible = true;
-	}
+	}*/
 }
 
 void ShipScript::onCreate()
