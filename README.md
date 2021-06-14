@@ -1,4 +1,9 @@
 # Asteriods Game
+
+![Play Image](images/play.png)
+![Game Over Image](images/game_over.png)
+
+
 ## Build Instructions
 
 This project was designed to use [Premake](https://premake.github.io/)
