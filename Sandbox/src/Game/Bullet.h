@@ -14,6 +14,8 @@ public:
 	}
 	virtual void onUpdate(DeltaTime& dt) override
 	{
+		if (shipScript->pause)
+			return;
 		timeLeft -= dt.getSeconds<float>();
 		if (timeLeft <= 0)
 		{

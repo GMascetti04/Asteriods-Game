@@ -7,6 +7,8 @@
 
 void ShipScript::onUpdate(DeltaTime& dt)
 {
+	if (pause)
+		return;
 	xEngine::Components::TransformComponent& ts = getComponent<xEngine::Components::TransformComponent>();
 
 
@@ -210,10 +212,10 @@ void ShipScript::onEvent(xEngine::Event& event)
 		}
 	}
 
-	/*if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::A))
-	{
-		getComponent<xEngine::Components::Sprite2DComponent>().visible = true;
-	}*/
+	//if (xEngine::Event::checkProperty<xEngine::Events::KeyPressEvent>(event, &xEngine::Events::KeyPressEvent::get_keyCode, codes::KeyCode::left_alt))
+	//{
+	//	pause = !pause;
+	//}
 }
 
 void ShipScript::onCreate()
@@ -270,10 +272,10 @@ void ShipScript::NewLevel()
 {
 	
 		score += 1000;
-		createAsteriod({ 0, 560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f,360.0f), asteriodTexture, 3);
-		createAsteriod({ -560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
-		createAsteriod({ 0, -560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
-		createAsteriod({ 560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3);
+		createAsteriod({ 0, 560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f,360.0f), asteriodTexture, 3, this);
+		createAsteriod({ -560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3, this);
+		createAsteriod({ 0, -560 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3, this);
+		createAsteriod({ 560, 0 }, Random::get().onUnitCircle() * 141.42f, getEntity().getScene(), Random::get().FloatRange(0.0f, 360.0f), asteriodTexture, 3, this);
 }
 
 bool ShipScript::CircleTriangleCollide(const glm::vec2& circleCenter, float circleRadius, const glm::vec2& a, const glm::vec2& b, const glm::vec2& c)

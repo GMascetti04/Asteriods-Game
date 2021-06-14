@@ -24,11 +24,14 @@ public:
 	int score = -1000;
 
 	Texture* asteriodTexture;
+	bool pause = false;
 private:
 	enum class GameState
 	{
 		Play, Dead, Respawn
 	};
+
+
 
 	GameState state = GameState::Play;
 	glm::vec2 velocity = {0,0};

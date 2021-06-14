@@ -1,7 +1,8 @@
 #include "xpch.h"
 #include "AsteriodScript.h"
+#include <Game/ShipScript.h>
 
-void createAsteriod(const glm::vec2& pos, const glm::vec2& velocity, Scene* scene, float angle, Texture* texture, int level)
+void createAsteriod(const glm::vec2& pos, const glm::vec2& velocity, Scene* scene, float angle, Texture* texture, int level, ShipScript* shipScript)
 {
 	//std::cout <<  "before" << texture << std::endl;
 	Entity ent = scene->createEntity();
@@ -13,6 +14,7 @@ void createAsteriod(const glm::vec2& pos, const glm::vec2& velocity, Scene* scen
 	ent.addComponent<xEngine::Components::ScriptComponent>().Attach<AsteriodScript>(ent);
 	ent.getComponent<xEngine::Components::ScriptComponent>().getScript<AsteriodScript>()->velocity = velocity;
 	ent.getComponent<xEngine::Components::ScriptComponent>().getScript<AsteriodScript>()->level = level;
+	ent.getComponent<xEngine::Components::ScriptComponent>().getScript<AsteriodScript>()->shipScript = shipScript;
 	ent.addComponent<xEngine::Components::TagComponent>().m_tag = "Asteriod";
 	//std::cout <<"after: " << texture << std::endl;
 }
